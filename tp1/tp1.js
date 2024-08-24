@@ -38,10 +38,6 @@ function setup() {
 
 function draw() {
   
-  print(mouseX+"/"+mouseY+" puto el q lee");
-  
-  
-  
   keyPressed();
   
   fondo(colorFondo);
