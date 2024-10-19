@@ -12,6 +12,11 @@ function cargarFondo(img, x, y, ancho, alto){
 //esta función se usa dentro y fuera de los botones
 function cargarTexto(txt, x, y){
   push()
+  noStroke();
+  fill(0,0,0,80);
+  rect(x-10,y+90,590,y+100);
+  pop()
+  push()
   textSize(14);
   fill(255,255,255);
   text(txt, x, y+100,590);

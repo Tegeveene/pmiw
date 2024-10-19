@@ -1,3 +1,4 @@
+
 //para DIBUJAR el boton
 function boton(x, y, ancho, alto, txt){
   if (sector(x, y, ancho, alto)){
@@ -85,7 +86,7 @@ function mousePressed(){
  }else if(estado === 14){
    clickbtn(20, 420, 150, 50, 11);
    clickbtn(470, 420, 150, 50, 3);
-  //botones de reinicio
+  //finales
  }else if(estado === -1 || estado === 8 || estado === 9 || estado === 10 || estado === 12 || estado === 13){
    clickbtn(250, 420, 150, 50, 0);
  }  
