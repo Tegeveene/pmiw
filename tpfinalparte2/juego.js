@@ -1,29 +1,41 @@
-class juego{
-  constructor(){
-    this.teclas = []; //array con las teclas que van a caer
-    this.zonaYdeColision = 600; //colision maxima de perder?
-    this.alturaDeZonaColision = 40; //colision minima para golpear?
+class juego {
+  constructor() {
+    this.notas = []; //array con las teclas que van a caer
+    this.teclado = [];
     this.barravida = new Vida(10, 10, 200, 20); //crea una barra de vida
-    this.columnas = 4; //esto tendria que ser automatico
-    this.letras = ['A', 'S', 'D', 'F'];//esto tambien
+    this.letras = ['a', 's', 'd', 'f'];//esto tambien
     this.puntaje = 0; //puntaje inicial
-    this.puntajeMax = 500; //esto no es necesario creo
-    this.finDeJuego = false; //ok
   }
-  
+
   //esto debe renderizar o al menos traer todos las funciones dibujar de todas las demas clases
-  dibujarjuego(){
-    rect(10,10,10);
+  dibujarjuego() {
+
+    for (let i=0; i<4; i++) {
+      this.notas[i].dibujarNota();
+      this.teclado[i].dibujartecla();
+      if (key === this.letras[i]) {
+        if (keyIsPressed && this.colision(i, 50) && this.notas[i].activo === true) {
+          this.notas[i].activo = false;
+          print("hit");
+        }
+      }
+    }
+    this.barravida.dibujarbarra();
   }
-  
-  dibujarinterfaz(){
-  
+
+  tocartecla(tecla) {
   }
-  
-  
-  //esto debe ejecutar todos las funciones de las clases acorde a lo que necesita el juego
-  ejecutarjuego(){
-  
+
+  setupjuego() {
+    for (let i=0; i<4; i++) {
+      this.notas[i] = new nota(i, random(0, -400));
+      this.teclado[i] = new teclas(i, 300);
+    }
   }
-  
+
+  colision(id, distancia) {
+    if ( dist(this.teclado[id].y, this.teclado[id].x, this.notas[id].y, this.notas[id].x) <= distancia) {
+      return true;
+    }
+  }
 }

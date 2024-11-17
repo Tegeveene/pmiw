@@ -1,3 +1,17 @@
+/*
+Gabriel Vega
+119164/3
+
+video: no hay video.
+
+Buena mañana, tarde o noche.
+Esta entrega se nos complico con el tiempo por la forma en la que nos organizamos para estar al día
+con las demás materias.
+Lamento entregar un código incompleto como este, cuando esto ya haya sido entregado voy a seguir intentando
+hacer funcionar el código mientras espero una devolución.
+Desde ya muchas gracias por leer. 
+
+*/
 //carga las imagenes
 let imagenes = [];
 //para llamar a la clase controlador en setup
