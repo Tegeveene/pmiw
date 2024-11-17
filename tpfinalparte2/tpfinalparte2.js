@@ -1,25 +1,31 @@
-
+//carga las imagenes
 let imagenes = [];
+//para llamar a la clase controlador en setup
+let control;
+//sonidos
+let sboton;
 
-
-//se llama al constructor de la clase Escenas
-let escenas =  new Escenas();
 
 function preload(){
- for(let i=0; i<4; i++){
+ for(let i=0; i<5; i++){
    imagenes[i] = loadImage("data/fondo"+i+".png");
  }
+ 
+ sBoton = loadSound("data/boton.mp3");
+
 }
 
 function setup(){
 createCanvas(640,480);
-escenas.configEscena();
+imageMode(RIGHT)
+textSize(20);
+control = new Controlador();
 }
 
 function draw(){
-escenas.dibujarEscena();
+ control.correr();
 }
 
 function mousePressed(){
-escenas.mousePresionado();
+  control.click();
 }

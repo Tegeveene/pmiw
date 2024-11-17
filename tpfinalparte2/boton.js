@@ -1,40 +1,58 @@
 class Boton {
-  constructor(x, y, ancho, alto, txt, escena) {
-    this.x = x;         
-    this.y = y;             
-    this.ancho = ancho;       
-    this.alto = alto;    
-    this.txt = txt;         
-    this.escena = escena;   
+  constructor() {
+    this.dibujar();
   }
 
 //-------------------   MÉTODOS   ------------------------
 
-dibujar(){
-  if (this.sector()){
+colision(x, y, ancho, alto){
+  return mouseX > x && mouseX < x + ancho && mouseY > y && mouseY < y + alto;
+}
+//dibuja el MOLDE de los botones q vamos a usar
+dibujar(x, y, ancho, alto, txt){
+  //highlight
+  if (this.colision(x, y, ancho, alto) === true){
     fill(0, 0, 0);
   } else {
     fill(150, 155, 255);
   }
-    rect(this.x, this.y, this.ancho, this.alto);
+    rect(x, y, ancho, alto);
     
+    //dibuja el boton
     push()
     textAlign(CENTER);
     fill(255,255,255);
-    text(this.txt, this.x + (this.ancho / 2), this.y + (this.alto / 2)+5);
+    text(txt, x + (ancho / 2), y + (alto / 2)+5);
     noFill();
     pop()
 }
 
-//RETORNA el valor de sector, sectoriza la zona
-sector(){
-  return mouseX > this.x && mouseX < this.x + this.ancho && mouseY > this.y && mouseY < this.y + this.alto;
+botonJugar(){
+this.dibujar(280, 420, 85, 40, "JUGAR");
+this.colision(280, 420, 85, 40);
 }
 
-clic(){
-  if (this.sector()){
-  return this.accion; // Devuelve la acción asociada al botón (cambia de estado)
-  }
- return null;
- }
+botonSiguiente(){
+this.dibujar(470, 420, 140, 40, "SIGUIENTE");
+this.colision(470, 420, 140, 40);
+}
+
+botonReiniciar(){
+this.dibujar(280, 420, 100, 40, "REINTENTAR");
+this.colision(280, 420, 100, 40);
+}
+
+botonVolver(){
+this.dibujar(20, 420, 90, 40, "VOLVER");
+this.colision(20, 420, 90, 40);
+}
+
+//click(cx, cy, cAncho, cAlto, target){
+//  if(this.colision(cx, cy, cAncho, cAlto)){
+//    sBoton.play();
+//    this.contador.estado = target;
+//  }
+//}
+
+
 }
