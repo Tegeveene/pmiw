@@ -1,59 +1,74 @@
 class Controlador {
-  constructor() {
-    this.estado = 0;
-    //this.cJuego();
-    this.cFondo();
-    this.cBoton();
+  constructor(estadoActual) {
+    this.estado = estadoActual;
+    this.cJuego = new Juego();
+    this.cFondo = new Fondo();
+    this.cBoton = new Boton(estadoActual);
+    
   }
 
-  //----------------metodos----------------------
-  //cJuego(){
-  //  this.juego = new juego();
-  //}
+//----------------metodos----------------------
 
-  cFondo() {
-    this.fondo = new Fondo();
-  }
+//este método s usa en el método "click()"
+controlarEstado(cambioEst){
+  this.estado = cambioEst;
+}
 
-  cBoton() {
-    this.boton = new Boton();
-  }
 
-  // Dibuja la escena actual y sus botones
-  dibujar() {
-    if (this.estado === 0) {
-      this.fondo.menu();
-      this.boton.botonJugar();
-    } else if (this.estado === 1) {
-      this.fondo.instrucciones();
-      this.boton.botonVolver();
-      this.boton.botonSiguiente();
-    } else if (this.estado === 2) {
+// Dibuja la escena actual y sus botones
+ejecutar(){
+  if(this.estado === 0){
+
+      this.cFondo.dibujarFondo(3);
+      this.cBoton.dibujar(250, 420, 140, 40, "JUGAR");
+
+    } else if(this.estado === 1){
+
+      this.cFondo.dibujarFondo(4);
+      this.cBoton.dibujar(250, 420, 140, 40, "ENTIENDO");
+
+    }else if(this.estado === 2){
+
       //llamamos al juego
-      this.juego.dibujar();
-    } else if (this.estado === 3) {
-      this.fondo.victoria();
-      this.boton.botonReiniciar();
-    } else if (this.estado === 4) {
-      this.fondo.derrota();
-      this.boton.botonReiniciar();
+      this.cFondo.dibujarFondo(0);
+      this.cJuego.setupjuego();
+      this.cJuego.dibujar();
+      this.cJuego.musicaFondo();
+
+    }else if(this.estado === 3){ // perdiste
+
+      this.cFondo.dibujarFondo(1);
+      this.cBoton.dibujar(250, 420, 140, 40, "REINTENTAR");
+
+    }else if(this.estado === 4){ // ganaste jej
+
+      this.cFondo.dibujarFondo(2);
+      this.cBoton.dibujar(250, 420, 140, 40, "REINTENTAR");
+
     }
   }
 
-  // EL TEMA DE ESTA LÓGICA ES QUE FALLA EN ALGO PERO TENGO
-  // LA CABEZA TAN QUEMADA QUE YA NO PUEDO PENSAR EN QUE!!
-  // Maneja los clics del mouse en la escena actual
-  click() {
-    sBoton.play();
-    if (target === 0 && this.boton.colision()) {
-      this.boton.botonJugar();
-    } else if (target === 1 && this.boton.colision()) {
-      this.boton.botonVolver();
-      this.boton.botonSiguiente();
-    } else if (target === 3 && this.boton.colision()) {
-      this.boton.botonReiniciar();
-    } else if (target === 4 && this.boton.colision()) {
-      this.boton.botonReiniciar();
-    }
-  }
+// Maneja los clics del mouse en la escena actual
+click(){
+
+//para ejecutar el sonido de click (no queremos q se ejecute en el minijuego)
+if(this.cBoton.colision(250, 420, 140, 40) && this.estado === 0 ||this.estado === 1||this.estado === 3||this.estado === 4){
+  sBoton.play();
+}
+
+if(this.estado === 0 && this.cBoton.colision(250, 420, 140, 40)){
+  this.controlarEstado(1);
+  
+}else if(this.estado === 1 && this.cBoton.colision(250, 420, 140, 40)){
+  this.controlarEstado(2);
+
+}else if(this.estado === 3 && this.cBoton.colision(250, 420, 140, 40)){
+  this.controlarEstado(0);
+
+}else if(this.estado === 4 && this.cBoton.colision(250, 420, 140, 40)){
+  this.controlarEstado(0);
+}
+
+}
+
 }

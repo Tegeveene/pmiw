@@ -12,9 +12,9 @@ class Vida{
   dibujar(){
     //barra roja (fondo de la barra)
   fill(255, 0, 0);
-  rect(this.x, this.y, ancho, alto);
+  rect(this.x, this.y, this.ancho, this.alto);
   fill(0, 255, 0);
-  rect(this.x, this.y, ancho * this.vidaMax/100, alto);
+  rect(this.x, this.y, this.ancho * this.vidaMax/100, this.alto);
   //se dibuja una barra con el ancho proporcional a la vida máxima
   }
   
