@@ -16,11 +16,8 @@ function preload(){
  for(let i=0; i<5; i++){
    imagenes[i] = loadImage("data/fondo"+i+".png");
  }
- 
  sBoton = loadSound("data/boton.mp3");
  sJuego = loadSound("data/musicaJuego.mp3");
-
-
 }
 
 function setup(){

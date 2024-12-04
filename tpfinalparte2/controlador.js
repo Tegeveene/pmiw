@@ -4,11 +4,9 @@ class Controlador {
     this.cJuego = new Juego();
     this.cFondo = new Fondo();
     this.cBoton = new Boton(estadoActual);
-    
   }
 
-//----------------metodos----------------------
-
+//----------------  MÉTODOS  ----------------------
 //este método s usa en el método "click()"
 controlarEstado(cambioEst){
   this.estado = cambioEst;
@@ -44,12 +42,13 @@ ejecutar(){
 
       this.cFondo.dibujarFondo(1);
       this.cBoton.dibujar(250, 420, 140, 40, "REINTENTAR");
+      this.cJuego.resetJuego();
 
     }else if(this.estado === 4 && this.cJuego.juegoGanado === true){ // ganaste jej
 
       this.cFondo.dibujarFondo(2);
       this.cBoton.dibujar(250, 420, 140, 40, "REINTENTAR");
-
+      this.cJuego.resetJuego();
     }
   }
 
