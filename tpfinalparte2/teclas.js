@@ -3,25 +3,24 @@ class Nota{
     this.carril = carril; //variable que sostiene el carril actual para modificar la posicion de elementos en base a este
     this.x = carril*width/4; //calcula la posicion precisa del carril donde se encuentra en base al carril, usado para el dibujo 
     this.y = y; //posicion y, para mostrar... la posicion y
-    this.tam = 110; //el tam de cada tecla, para poder modificarlo mas facilmente
+    this.tam = 100; //el tam de cada tecla, para poder modificarlo mas facilmente
     this.vel = 4; // la velocidad de cada tecla, lo mismo de arriba
     this.activo = true; //para desactivar la colision de la tecla una vez se presiona una vez
   }
   
 //-------------------   MÉTODOS   ------------------------
 //se encarga del movimiento particular de la tecla
-  moverNota(){
-    this.y += this.vel; 
-    
-    //resetea la posicion de la tecla, es mas facil colocarla aca que en su propia funcion
-    if(this.y >= height+this.tam){
-    this.y = 0-this.tam*random(0,4);
-    this.activo = true;
-    }
+moverNota(){
+  this.y = this.y + this.vel;
+  //resetea la posicion de la tecla, es mas facil colocarla aca que en su propia funcion
+  if(this.y >= height+this.tam){
+  this.y = 0-this.tam*random(0,4);
+  this.activo = true;
   }
+}
   
   //dibuja las teclas
-  dibujarNota(){
+dibujarNota(){
     
   if(this.activo){
   push();
@@ -31,7 +30,7 @@ class Nota{
   }
   //esto hace que se mueva siempre que se este dibujando
   this.moverNota();
-  }
+}
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

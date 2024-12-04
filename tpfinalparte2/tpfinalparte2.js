@@ -28,11 +28,12 @@ createCanvas(640,480);
 imageMode(RIGHT)
 textSize(20);
 control = new Controlador(0);
+control.setupCont();
 }
 
 function draw(){
-  control.ejecutar();
-  console.log("estado: " + control.estado +" X: "+ mouseX +" Y: "+ mouseY);
+control.ejecutar();
+console.log("estado: " + control.estado +" X: "+ mouseX +" Y: "+ mouseY);
 }
 
 function mousePressed(){
