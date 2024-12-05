@@ -16,9 +16,7 @@ class Juego {
 
 //Crea todas las instancias de los elementos del juego para que esten listas para usarse
 setupjuego(){
-
   this.barravida = new Vida(10, 10, 200, 20);
-
 for (let i=0; i<4; i++){
   this.notas[i] = new Nota(i, random(-100, -50));
   this.teclado[i] = new teclas(i, 400);
@@ -43,7 +41,6 @@ chequearJuego(){
 
 //esto debe renderizar o al menos traer todos las funciones dibujar de todas las demas clases
 dibujar(){
-
   if(this.juegoActivado === true){
     //se encarga del dibujar las teclas, y las notas individualmente, llamando a sus respectivos "dibujar"
     for (let i=0; i<4; i++){

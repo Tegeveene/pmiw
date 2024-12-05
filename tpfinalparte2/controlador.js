@@ -71,7 +71,6 @@ click(){
 if(this.cBoton.colision(250, 420, 140, 40) && this.estado === 0 || this.estado === 1 || this.estado === 3 || this.estado === 4){
   sBoton.play();
 }
-
 if(this.estado === 0 && this.cBoton.colision(250, 420, 140, 40)){
   this.controlarEstado(1);
   

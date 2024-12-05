@@ -2,16 +2,17 @@
 Gabriel Vega
 119164/3
 
-video: 
+video: https://youtu.be/6FfjVBgxMDM
 
 */
 
-//carga las imagenes
-let imagenes = [];
 //para llamar a la clase controlador en setup
 let control;
+
 //sonidos
 let sBoton, sJuego, sError, sGanaste, sPerdiste;
+//carga las imagenes
+let imagenes = [];
 
 function preload(){
  for(let i=0; i<5; i++){
@@ -24,7 +25,7 @@ function preload(){
  sGanaste = loadSound("data/ganaste.mp3");
  sError = loadSound("data/error.mp3");
 
- }
+}
 
 function setup(){
 createCanvas(640,480);
@@ -37,7 +38,6 @@ control.setupCont();
 
 function draw(){
 control.ejecutar();
-console.log("estado: " + control.estado +" X: "+ mouseX +" Y: "+ mouseY);
 }
 
 function mousePressed(){
