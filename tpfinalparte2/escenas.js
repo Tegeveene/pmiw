@@ -1,6 +1,5 @@
 class Fondo{
  constructor(){
-    
  } 
   
 cargarFondo(img){

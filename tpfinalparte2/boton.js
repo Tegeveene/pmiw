@@ -15,9 +15,8 @@ dibujar(x, y, ancho, alto, txt){
   } else {
     fill(150, 155, 255);
   }
-    rect(x, y, ancho, alto);
-    
     //dibuja el boton
+    rect(x, y, ancho, alto);
     push();
     textAlign(CENTER);
     fill(255,255,255);

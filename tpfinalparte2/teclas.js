@@ -5,7 +5,7 @@ class Nota{
     this.y = y; //posicion y, para mostrar... la posicion y
     this.tam = 100; //el tam de cada tecla, para poder modificarlo mas facilmente
     this.vel = 4; // la velocidad de cada tecla, lo mismo de arriba
-    this.activo = false; //para desactivar la colision de la tecla una vez se presiona una vez
+    this.activo = true; //para desactivar la colision de la tecla una vez se presiona una vez
   }
   
 //-------------------   MÉTODOS   ------------------------
@@ -13,7 +13,7 @@ class Nota{
 moverNota(){
   this.y = this.y + this.vel;
   //resetea la posicion de la tecla, es mas facil colocarla aca que en su propia funcion
-  if(this.y >= height+this.tam){
+  if(this.y >= height+10){
   this.y = 0-this.tam*random(0,4);
   this.activo = true;
   }
