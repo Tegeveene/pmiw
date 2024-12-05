@@ -5,17 +5,20 @@ function musicaFondo(){
     sFondo.loop(true);
   }
 }
+
+
 //se cargan tanto las imagenes como los textos (es la misma shit)
 function cargarFondo(img, x, y){
   image(img, x, y, width, height);
 }
+
+
 //esta función se usa dentro y fuera de los botones
 function cargarTexto(txt, x, y){
   push()
   noStroke();
   if(txt !== ""){
   fill(0,0,0,80);
-  //rect(x-10,y+90,590,y+100);
   rect(x,y,x+400,y+100)
   pop()
   }
@@ -26,9 +29,12 @@ function cargarTexto(txt, x, y){
   noFill();
   pop()
 }
+
+
 function Escena(img,cuento,txt0,txt1,txt2,NumBotones){
     cargarFondo(img, 0, 0);
     cargarTexto(cuento, CENTRO[0]/4, CENTRO[1]/2);
+
     if(NumBotones === 1){
     boton(MEDIO[0],MEDIO[1], txt0);
     }
@@ -36,12 +42,14 @@ function Escena(img,cuento,txt0,txt1,txt2,NumBotones){
     boton(IZQUIERDA[0],IZQUIERDA[1],txt0);
     boton(DERECHA[0],DERECHA[1],txt1);
     
-    } else if(NumBotones === 3){
+    }else if(NumBotones === 3){
     boton(IZQUIERDA[0], IZQUIERDA[1], txt0);
     boton(MEDIO[0],MEDIO[1], txt1);
     boton(DERECHA[0], DERECHA[1], txt2);
     }
 }
+
+
 function cargarEscena(){
     if(estado == 0){
     Escena(fondos[0],"",textos[1],textos[2],0,2);

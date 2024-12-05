@@ -55,7 +55,7 @@ function mousePressed() {
     //Sueño (eleccion)
   } else if (estado === 3) {
     clickbtnEspecial(IZQUIERDA[0], IZQUIERDA[1], 4, "jujuy");
-    clickbtnEspecial(CENTRO[0]-80, CENTRO[1]+(CENTRO[1]/2), 4, "budapest");
+    clickbtnEspecial(CENTRO[0]-80, CENTRO[1]+(CENTRO[1]/2)+50, 4, "budapest");
     clickbtnEspecial(DERECHA[0], DERECHA[1], 4, "quetzaltenango");
     //28 de enero
   } else if (estado === 4) {//3,5

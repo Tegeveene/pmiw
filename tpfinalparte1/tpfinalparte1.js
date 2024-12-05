@@ -1,8 +1,7 @@
 /*
 Gabriel Vega 119164/3
- Alex sena 119144/8
- Comisión 1
- video (Alex): https://youtu.be/gt3gNyA_dUw
+Comisión 1
+video: https://youtu.be/ngUBzggNdK4 
  */
 
 //funciones para las escenas
@@ -40,13 +39,14 @@ function setup() {
   }
 
   imageMode(RIGHT)
-    estado = 0;
+  estado = 0;
   textSize(20);
   CENTRO = [width/2, height/2];
+
   //cosa simple para que pueda leer el codigo y que sea mas facil de modificar
-  DERECHA = [CENTRO[0]+(CENTRO[0]/4), CENTRO[1]+(CENTRO[1]/2)];
-  IZQUIERDA = [CENTRO[0]/4, CENTRO[1]+(CENTRO[1]/2)];
-  MEDIO = [CENTRO[0]-80, CENTRO[1]+(CENTRO[1]/2)];
+  DERECHA = [CENTRO[0]+(CENTRO[0]/4), CENTRO[1]+(CENTRO[1]/2)+50];
+  IZQUIERDA = [CENTRO[0]/4, CENTRO[1]+(CENTRO[1]/2)+50];
+  MEDIO = [CENTRO[0]-80, CENTRO[1]+(CENTRO[1]/2)+50];
 }
 
 
