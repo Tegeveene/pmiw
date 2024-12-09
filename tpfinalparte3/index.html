@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TP Final Parte 3</title>
+    <link rel="icon" href="data/img/icono.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  
+  <body>
+  <div class="container">
+    <!--Barra de navegación-->
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand " href="#">Barra de Navegación</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"><img src="data/img/icono.png" alt="Logo No Encontrado" width="100"></h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 nav-underline">
+              <li class="nav-item">
+                <a class="nav-link active"  href="titulo">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#titulo">Introducción</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Aventura Gráfica</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Video Juego</a>
+              </li>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+    
+    <div class="container py-5">
+     <h1 id="titulo">"La Lejana"</h1>
+     <h2>de Julio Cortázar</h2>
+    </div>
+
+    <div class="container py-5">
+      <article>
+        <p>"La Lejana" cuenta la historia de Alina Reyes, una mujer que vive entre el lujo y la inquietud. Desde hace un tiempo, siente una conexión inexplicable con una figura distante, alguien cuya existencia parece estar marcada por el sufrimiento. Esta presencia invade sus pensamientos y sueños, llevándola a cuestionar quién es realmente.</p>
+        <p>A medida que Alina se enfrenta a su sensación de desdoblamiento, un viaje le ofrece respuestas inesperadas, aunque ambiguas. El cuento teje una atmósfera de misterio y reflexiona sobre la identidad y la relación entre dos vidas opuestas pero entrelazadas.</p>
+      </article>
+
+      <div class="container py-5">
+        <a href="data/archivos/Lejana.pdf" download class="btn btn-primary">Descargar Cuento</a>
+      </div>
+      <article>
+        <p>A continuación les dejamos la aventura gráfica que creamos, esta contiene MÁS de un final además del canonico basandonos en el storytelling del estilo "what if" para mostrar al espectador que es lo que pasaría si Alina Reyes decidiera una ubicación diferente a la canonica para ir a encontrarse con la lejana.</p>
+      </article>
+    <!-- Botón de modal-->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1">Aventura Gráfica</button>
+
+<!-- Modal -->
+<div class="modal fade" id="modal1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Aventura Gráfica</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <!--cuerpo del modal-->
+        <div class="modal-body d-flex justify-content-center align-items-center">
+        <iframe id="iframe1" src="data/tpfinalparte1/index.html" width="640" height="490"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+
+
+    <div class="container">
+
+      <article>
+        <p>Inspirados en el día 20 de Enero, en el momento en el que Alina Reyes toca el piano junto a su hermana Nora creamos un juego del tipo "piano tiles" en donde al no saber bien cual es el tema que Alina está tocando pusimos uno que recolecta varios, esto también proyecta el como tocaba Alina ese mismo día ya que se desconcentraba mucho y perdía el control.</p>
+        <p>Lo que tratamos de hacer en esta entrega es tratar de mostrar el punto de vista de Alina viviendo ese momento para que el espectador pueda vivir en carne propia lo que fue.</p>
+      </article>
+
+    <!-- Botón de modal DOS-->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2">Video Juego</button>
+
+<!-- Modal 2-->
+<div class="modal fade" id="modal2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Video Juego</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <!--cuerpo del modal-->
+        <div class="modal-body d-flex justify-content-center align-items-center">
+        <iframe id="iframe2" src="data/tpfinalparte2/index.html" width="640" height="490"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+
+
+    <!--PIE-->
+    <footer>
+      <h5>Página hecha con amor por Gabriel Vega AKA tege y Alex Sena</h5>
+    </footer>
+
+    <!--ESTO ES PARA DEJAR DE EJECUTAR EL CONTENIDO DENTRO DE LOS IFRAMES DE CADA MODAL DE FORMA INDEPENDIENTE-->
+    <script>
+      // Controlar el Modal 1
+      const modal1 = document.getElementById('modal1');
+      const iframeModal1 = document.getElementById('iframe1');
+    
+      modal1.addEventListener('hidden.bs.modal', () => {
+        // Detener la ejecución del iframe al cerrar el Modal 1
+        iframeModal1.src = '';
+      });
+    
+      modal1.addEventListener('shown.bs.modal', () => {
+        // Restaurar la URL del iframe al abrir el Modal 1
+        iframeModal1.src = 'data/tpfinalparte1/index.html';
+      });
+    
+      // Controlar el Modal 2
+      const modal2 = document.getElementById('modal2');
+      const iframeModal2 = document.getElementById('iframe2');
+    
+      modal2.addEventListener('hidden.bs.modal', () => {
+        // Detener la ejecución del iframe al cerrar el Modal 2
+        iframeModal2.src = '';
+      });
+    
+      modal2.addEventListener('shown.bs.modal', () => {
+        // Restaurar la URL del iframe al abrir el Modal 2
+        iframeModal2.src = 'data/tpfinalparte2/index.html';
+      });
+    </script>
+
+  <!---NO TOCAR ESTO-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
